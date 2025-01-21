@@ -1,12 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import { Hero } from "../components/ui/animated-hero";
 
 export default function Home() {
   const navigate = useNavigate();
 
   return (
     <div className="px-6 lg:px-12 py-16">
+      <Hero />
       <div className="max-w-7xl mx-auto space-y-8">
         <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
           Combat Coin: Empowering the Future of Combat Sports
