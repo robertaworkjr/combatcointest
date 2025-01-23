@@ -1,53 +1,41 @@
-import React, { lazy, Suspense } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import RootLayout from './components/layout/RootLayout';
+import Home from './pages/Home.jsx';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Features from './pages/Features';
+import LaunchArticle from './pages/LaunchArticle';
+import Onboarding from './pages/Onboarding';
+import Register from './pages/Register';
+import Roadmap from './pages/Roadmap';
+import Team from './pages/Team';
+import Tokenomics from './pages/Tokenomics';
+import Login from './pages/admin/Login';
+import HashKeyManager from './pages/admin/HashKeyManager';
 
-// Lazy load pages for better performance
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Features = lazy(() => import('./pages/Features'));
-const Roadmap = lazy(() => import('./pages/Roadmap'));
-const Team = lazy(() => import('./pages/Team'));
-const Tokenomics = lazy(() => import('./pages/Tokenomics'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Onboarding = lazy(() => import('./pages/Onboarding'));
-const Register = lazy(() => import('./pages/Register'));
-const AdminLogin = lazy(() => import('./pages/admin/Login'));
-const AdminHashKeyManager = lazy(() => import('./pages/admin/HashKeyManager'));
-
-// Loading component
-const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8">
-      <div className="w-8 h-8 border-4 border-orange-500 border-t-transparent rounded-full animate-spin" />
-    </div>
-  </div>
+const App = () => (
+  <ErrorBoundary>
+    <Routes>
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="features" element={<Features />} />
+        <Route path="launch" element={<LaunchArticle />} />
+        <Route path="onboarding" element={<Onboarding />} />
+        <Route path="register" element={<Register />} />
+        <Route path="roadmap" element={<Roadmap />} />
+        <Route path="team" element={<Team />} />
+        <Route path="tokenomics" element={<Tokenomics />} />
+        <Route path="admin">
+          <Route path="login" element={<Login />} />
+          <Route path="hashkey" element={<HashKeyManager />} />
+        </Route>
+      </Route>
+    </Routes>
+  </ErrorBoundary>
 );
 
-export default function App() {
-  return (
-    <ErrorBoundary>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route element={<RootLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/roadmap" element={<Roadmap />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/tokenomics" element={<Tokenomics />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/onboarding" element={<Onboarding />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/admin">
-              <Route path="login" element={<AdminLogin />} />
-              <Route path="hash-keys" element={<AdminHashKeyManager />} />
-            </Route>
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Route>
-        </Routes>
-      </Suspense>
-    </ErrorBoundary>
-  );
-}
+export default App;
