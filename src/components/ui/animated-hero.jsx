@@ -1,7 +1,7 @@
 import React from "react";
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "./button.jsx";
+import { Button } from "./button";
 
 const Hero = () => {
   return (
