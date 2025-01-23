@@ -64,7 +64,7 @@ export default function Team() {
       name: "Alex Thompson",
       role: "Founder & CEO",
       bio: "Former MMA fighter with 10+ years in blockchain technology. Pioneered several successful crypto projects.",
-      image: "https://placehold.co/400x400",
+      image: "/src/assets/images/1.jpg",
       expertise: ["Blockchain", "Fight Management", "Strategy", "Leadership"],
       socials: {
         linkedin: "#",
@@ -76,7 +76,7 @@ export default function Team() {
       name: "Sarah Chen",
       role: "CTO",
       bio: "Blockchain architect with experience at major exchanges. Led development teams at Fortune 500 companies.",
-      image: "https://placehold.co/400x400",
+      image: "/src/assets/images/2.jpg",
       expertise: ["Smart Contracts", "DeFi", "Security", "Architecture"],
       socials: {
         github: "#",
@@ -85,11 +85,11 @@ export default function Team() {
       }
     },
     {
-      name: "Mike Rodriguez",
-      role: "Head of Partnerships",
-      bio: "15+ years in combat sports management. Built extensive networks across major fight promotions.",
-      image: "https://placehold.co/400x400",
-      expertise: ["Sports Management", "Negotiations", "Marketing", "Business Development"],
+      name: "Mike Johnson",
+      role: "Head of Operations",
+      bio: "Veteran combat sports promoter with expertise in event management and fighter relations.",
+      image: "/src/assets/images/3.jpg",
+      expertise: ["Operations", "Event Management", "Fighter Relations", "Marketing"],
       socials: {
         linkedin: "#",
         twitter: "#"
@@ -99,7 +99,7 @@ export default function Team() {
       name: "Lisa Kumar",
       role: "Lead Developer",
       bio: "Smart contract specialist and security expert. Previously secured multi-million dollar DeFi protocols.",
-      image: "https://placehold.co/400x400",
+      image: "/src/assets/images/4.jpg",
       expertise: ["Solidity", "DApp Development", "Security Auditing", "Web3"],
       socials: {
         github: "#",
@@ -111,7 +111,7 @@ export default function Team() {
       name: "James Wilson",
       role: "Community Manager",
       bio: "Professional boxing background with 5+ years in crypto community management.",
-      image: "https://placehold.co/400x400",
+      image: "/src/assets/images/5.jpg",
       expertise: ["Community Building", "Social Media", "Content Strategy", "Event Management"],
       socials: {
         twitter: "#",
@@ -122,7 +122,7 @@ export default function Team() {
       name: "Ana Martinez",
       role: "Marketing Director",
       bio: "Combat sports marketing veteran with expertise in digital strategy and brand development.",
-      image: "https://placehold.co/400x400",
+      image: "/src/assets/images/6.jpg",
       expertise: ["Digital Marketing", "Brand Strategy", "PR", "Analytics"],
       socials: {
         linkedin: "#",
